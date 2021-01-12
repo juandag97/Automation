@@ -10,9 +10,9 @@ class AddRemoveElements(unittest.TestCase):
         driver.maximize_window()
         #driver.get('http://demo-store.seleniumacademy.com/')
         driver.get('http://the-internet.herokuapp.com/')
+        driver.find_element_by_xpath('//*[@id="content"]/ul/li[2]/a').click()
     def test_add_remove(self):
         driver = self.driver
-        driver.find_element_by_xpath('//*[@id="content"]/ul/li[2]/a').click()
         elements_added = int(input('How many elements will you add? '))
         elements_removed = int(input('How many elements will you remove? '))
         total_elements = elements_added - elements_removed
